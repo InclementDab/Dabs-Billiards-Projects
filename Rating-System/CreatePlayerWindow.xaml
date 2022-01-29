@@ -11,7 +11,7 @@
         ResizeMode="NoResize"
         ShowInTaskbar="False"
         WindowStartupLocation="CenterOwner"
-        Title="Create Player">
+        Title="Create Player" Background="#FF2D2D2D">
     <Grid Margin="15">
         <Grid.Resources>
             <!-- Default settings for controls -->
@@ -42,19 +42,19 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0">First Name:</Label>
-        <TextBox Name="FirstNameTextBox" Grid.Column="1" Grid.Row="0" />
+        <Label Grid.Column="0" Grid.Row="0" Foreground="#FFB4B4B4">First Name:</Label>
+        <TextBox Name="FirstNameTextBox" Grid.Column="1" Grid.Row="0" BorderBrush="#FFB4B4B4" Background="{x:Null}" />
 
-        <Label Grid.Column="0" Grid.Row="1">Last Name:</Label>
-        <TextBox Name="LastNameTextBox" Grid.Column="1" Grid.Row="1"/>
+        <Label Grid.Column="0" Grid.Row="1" Foreground="#FFB4B4B4">Last Name:</Label>
+        <TextBox Name="LastNameTextBox" Grid.Column="1" Grid.Row="1" BorderBrush="#FFB4B4B4" Background="{x:Null}"/>
 
-        <Label Grid.Column="0" Grid.Row="2">Student ID:</Label>
-        <TextBox Name="StudentIDTextBox" Grid.Column="1" Grid.Row="2" PreviewTextInput="PreviewStudentIDInput" />
+        <Label Grid.Column="0" Grid.Row="2" Foreground="#FFB4B4B4">Student ID:</Label>
+        <TextBox Name="StudentIDTextBox" Grid.Column="1" Grid.Row="2" PreviewTextInput="PreviewStudentIDInput" BorderBrush="#FFB4B4B4" Background="{x:Null}" />
 
         <!-- Accept or Cancel -->
         <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Name="OkButton" Click="OkButton_Click" IsDefault="True">OK</Button>
-            <Button Name="CancelButton" IsCancel="True">Cancel</Button>
+            <Button Name="OkButton" Click="OkButton_Click" IsDefault="True" BorderBrush="#FFB4B4B4" Background="{x:Null}" Foreground="#FFB4B4B4">OK</Button>
+            <Button Name="CancelButton" IsCancel="True" BorderBrush="#FFB4B4B4" Background="{x:Null}" Foreground="#FFB4B4B4">Cancel</Button>
         </StackPanel>
     </Grid >
 </Window>
