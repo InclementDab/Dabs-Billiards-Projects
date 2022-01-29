@@ -13,9 +13,11 @@ namespace Rating_System
 {
     public class BilliardsPlayer : GlickoPlayer, INotifyPropertyChanged
     {
+        [Key]
+        public int ID { get; set; }
+
         private int _studentID;
 
-        [Key]
         [Description("PSU Student ID")]
         public int StudentID {
             get => _studentID;

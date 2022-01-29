@@ -30,9 +30,13 @@
                             <GridViewColumn DisplayMemberBinding="{Binding Path=Rating}" Header="Rating" Width="75"/>
                         </GridView>
                     </ListView.View>
-                    
+
                 </ListView>
-                <Button Width="150" Margin="25" Click="AddPlayer_Click">Add Player</Button>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center" Margin="10">Student ID:</TextBlock>
+                    <TextBox Width="250" Height="20" PreviewTextInput="PreviewStudentIDInput" Text="{Binding Path=StudentIDBox, Mode=TwoWay}"></TextBox>
+                    <Button Width="150" Margin="25" Click="AddPlayer_Click">Add Player</Button>
+                </StackPanel>
             </StackPanel>
         </StackPanel>
         <!--StackPanel VerticalAlignment="Center">

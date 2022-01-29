@@ -20,4 +20,3 @@ C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.csproj.Core
 C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.csproj.CopyComplete
 C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.exe
 C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.pdb
-C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.csproj.AssemblyReference.cache
