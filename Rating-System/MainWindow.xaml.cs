@@ -34,7 +34,7 @@ namespace Rating_System
         public MainWindow()
         {
             DataContext = new MainWindowViewModel();
-            InitializeComponent();
+            InitializeComponent(); 
 
             Debug.WriteLine("Loading Database...");
             foreach (BilliardsPlayer billiards_player in App.Database.Players) {
@@ -77,6 +77,7 @@ namespace Rating_System
     public class MainWindowViewModel : INotifyPropertyChanged
     {
         public ObservableCollection<BilliardsPlayer> BilliardsPlayers { get; set; } = new ObservableCollection<BilliardsPlayer>();
+        public ObservableCollection<BilliardsMatch> BilliardsMatches { get; set; } = new ObservableCollection<BilliardsMatch>();
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void NotifyPropertyChanged([CallerMemberName] string property_name = "")

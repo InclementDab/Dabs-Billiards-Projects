@@ -9,32 +9,36 @@
     <Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
             <StackPanel>
-                <ListView Height="350" ItemsSource="{Binding BilliardsPlayers}">
-                    <ListView.View>
-                        <GridView AllowsColumnReorder="True" ColumnHeaderToolTip="Player Information">
-                            <GridViewColumn Header="First Name" Width="100">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBox Text="{Binding Path=FirstName, Mode=TwoWay}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn Header="Last Name" Width="100">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBox Text="{Binding Path=LastName, Mode=TwoWay}"/>
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path=StudentID}" Header="Student ID" Width="100"/>
-                            <GridViewColumn DisplayMemberBinding="{Binding Path=Rating}" Header="Rating" Width="75"/>
-                        </GridView>
-                    </ListView.View>
+                <TabControl Height="450" Width="500">
+                    <TabItem Header="Players">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <ListView Height="350" ItemsSource="{Binding BilliardsPlayers}">
+                                <ListView.View>
+                                    <GridView AllowsColumnReorder="True" ColumnHeaderToolTip="Player Information">
+                                        <GridViewColumn DisplayMemberBinding="{Binding Path=FirstName}" Header="First Name" Width="100"/>
+                                        <GridViewColumn DisplayMemberBinding="{Binding Path=LastName}" Header="Last Name" Width="100"/>
+                                        <GridViewColumn DisplayMemberBinding="{Binding Path=StudentID}" Header="Student ID" Width="100"/>
+                                        <GridViewColumn DisplayMemberBinding="{Binding Path=Rating}" Header="Rating" Width="75"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
 
-                </ListView>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button Width="150" Click="AddPlayer_Click">Add Player</Button>
-                </StackPanel>
+                            <Button Width="150" Click="AddPlayer_Click">Add Player</Button>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Matches">
+                        <ListView ItemsSource="{Binding BilliardsMatches}">
+                            <ListView.View>
+                                <GridView AllowsColumnReorder="True" ColumnHeaderToolTip="Player Information">
+                                    <GridViewColumn DisplayMemberBinding="{Binding Path=Player1Data}" Header="Player 1" Width="100"/>
+                                    <GridViewColumn DisplayMemberBinding="{Binding Path=Player2Data}" Header="Player 2" Width="100"/>
+                                    <GridViewColumn DisplayMemberBinding="{Binding Path=StudentID}" Header="Balls Potted" Width="100"/>
+                                    <GridViewColumn DisplayMemberBinding="{Binding Path=Rating}" Header="Rating" Width="75"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </TabItem>
+                </TabControl>
             </StackPanel>
         </StackPanel>
         <!--StackPanel VerticalAlignment="Center">
