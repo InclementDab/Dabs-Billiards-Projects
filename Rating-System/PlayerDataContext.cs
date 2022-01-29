@@ -11,6 +11,16 @@ using System.Runtime.CompilerServices;
 
 namespace Rating_System
 {
+    public class AppDataContext : DbContext
+    {
+        public virtual DbSet<BilliardsPlayer> Players { get; set; }
+        public virtual DbSet<BilliardsMatch> Matches { get; set; }
+
+        public AppDataContext() : base("name=PSUPlayerData")
+        {
+        }
+    }
+
     public class BilliardsPlayer : GlickoPlayer, INotifyPropertyChanged
     {
         [Key]
@@ -56,13 +66,15 @@ namespace Rating_System
         }
     }
 
-    public class PlayerDataContext: DbContext
+    public class BilliardsMatch
     {
-        public virtual DbSet<BilliardsPlayer> Players { get; set; }
+        [Key]
+        public int ID { get; set; }
 
-        public PlayerDataContext() : base("name=PSUPlayerData")
-        {
+        public BilliardsPlayer Winner { get; set; }
+        public BilliardsPlayer Loser { get; set; }
 
-        }
+        public int WinnerBallsPocketed { get; set; }
+        public int LoserBallsPocketed { get; set; }
     }
 }
