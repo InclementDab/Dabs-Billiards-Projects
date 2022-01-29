@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Copyright>Copyright ©  2016</Copyright>
+    <Authors>ImranSKhan</Authors>
+    <Company>ImranSKhan</Company>
+    <PackageProjectUrl>https://github.com/ikhanage/Glicko2</PackageProjectUrl>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/ikhanage/Glicko2</RepositoryUrl>
+    <PackageTags>ratings rankings elo glicko</PackageTags>
+  </PropertyGroup>
+</Project>

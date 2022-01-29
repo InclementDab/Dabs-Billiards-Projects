@@ -1,0 +1,44 @@
+﻿<Window x:Class="Rating_System.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rating_System"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Stretch">
+            <StackPanel>
+                <ListView Height="350" ItemsSource="{Binding BilliardsPlayers}">
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="True" ColumnHeaderToolTip="Player Information">
+                            <GridViewColumn Header="First Name" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBox Text="{Binding Path=FirstName, Mode=TwoWay}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Header="Last Name" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBox Text="{Binding Path=LastName, Mode=TwoWay}"/>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=StudentID}" Header="Student ID" Width="100"/>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Rating}" Header="Rating" Width="75"/>
+                        </GridView>
+                    </ListView.View>
+                    
+                </ListView>
+                <Button Width="150" Margin="25" Click="AddPlayer_Click">Add Player</Button>
+            </StackPanel>
+        </StackPanel>
+        <!--StackPanel VerticalAlignment="Center">
+            
+            <TextBox Width="100">Player Name</TextBox>
+            <Button Width="250" Height="50" Click="PlayGame_Click">Play Game</Button>
+        </StackPanel-->
+    </Grid>
+</Window>
