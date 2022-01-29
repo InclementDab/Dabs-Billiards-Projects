@@ -69,7 +69,7 @@ namespace Rating_System
 
         private void AddPlayer_Click(object sender, RoutedEventArgs e)
         {
-            if (m_MainWindowViewModel.StudentIDBox == string.Empty) {
+            if (m_MainWindowViewModel.StudentIDBox == null || m_MainWindowViewModel.StudentIDBox == string.Empty) {
                 Debug.WriteLine("Cannot Enter a student with an ID of 0");
                 return;
             }

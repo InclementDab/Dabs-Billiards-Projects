@@ -20,3 +20,15 @@ C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.csproj.Core
 C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.csproj.CopyComplete
 C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.exe
 C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.pdb
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\ControlzEx.dll
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\MahApps.Metro.dll
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\ControlzEx.pdb
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\ControlzEx.xml
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\MahApps.Metro.pdb
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\MahApps.Metro.xml
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.csproj.AssemblyReference.cache
+C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\App.baml
