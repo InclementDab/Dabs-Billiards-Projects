@@ -41,21 +41,21 @@
                     </TabItem>
                 </TabControl>
             </StackPanel>
-            <StackPanel Width="340">
-                <Frame Content="" Height="42" MinWidth="289"/>
-                <WrapPanel Height="350" Width="330" Background="#26C8C8C8" Margin="0">
-                    <Label Content="Player 1 ID" Foreground="#FFB4B4B4" Margin="20,0" Padding="0" Width="290" Height="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                    <TextBox Height="23" TextWrapping="Wrap" Width="215" Background="{x:Null}" BorderBrush="#FFB4B4B4" Foreground="#FFB4B4B4" Margin="20,0,0,0" MinHeight="23"/>
-                    <Label Content="Score" Foreground="#FFB4B4B4" Margin="10,0,0,0"/>
-                    <TextBox Height="23" TextWrapping="Wrap" Width="30" Background="{x:Null}" Foreground="#FFB4B4B4" MinHeight="23"/>
+            <StackPanel Margin="0 50 0 0">
+                <WrapPanel Width="330" Background="#26C8C8C8" Margin="0">
+                    <Label Content="Winner ID" Foreground="#FFB4B4B4" Margin="20,0" Padding="0" Width="290" Height="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox Text="{Binding WinnerIDBox}" PreviewTextInput="PreviewStudentIDInput" Height="23" TextWrapping="Wrap" Width="215" Background="{x:Null}" BorderBrush="#FFB4B4B4" Foreground="#FFB4B4B4" Margin="20,0,0,0" MinHeight="23"/>
+                    <Label Content="Balls" Foreground="#FFB4B4B4" Margin="10,0,0,0"/>
+                    <TextBox Text="{Binding WinnerBallsBox}" PreviewTextInput="PreviewStudentIDInput" Height="23" TextWrapping="Wrap" Width="30" Background="{x:Null}" Foreground="#FFB4B4B4" MinHeight="23"/>
                 </WrapPanel>
-                <Button Content="Report Match" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="76,0" Width="140" Background="{x:Null}" BorderBrush="#FFB4B4B4" Foreground="#FFB4B4B4"/>
+                <WrapPanel Width="330" Background="#26C8C8C8" Margin="0">
+                    <Label Content="Loser ID" Foreground="#FFB4B4B4" Margin="20,0" Padding="0" Width="290" Height="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox Text="{Binding LoserIDBox}" PreviewTextInput="PreviewStudentIDInput" Height="23" TextWrapping="Wrap" Width="215" Background="{x:Null}" BorderBrush="#FFB4B4B4" Foreground="#FFB4B4B4" Margin="20,0,0,0" MinHeight="23"/>
+                    <Label Content="Balls" Foreground="#FFB4B4B4" Margin="10,0,0,0"/>
+                    <TextBox Text="{Binding LoserBallsBox}" PreviewTextInput="PreviewStudentIDInput" Height="23" TextWrapping="Wrap" Width="30" Background="{x:Null}" Foreground="#FFB4B4B4" MinHeight="23"/>
+                </WrapPanel>
+                <Button Click="ReportMatch_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="76,0" Width="140" Background="{x:Null}" BorderBrush="#FFB4B4B4" Foreground="#FFB4B4B4">Report Match</Button>
             </StackPanel>
         </StackPanel>
-        <!--StackPanel VerticalAlignment="Center">
-            
-            <TextBox Width="100">Player Name</TextBox>
-            <Button Width="250" Height="50" Click="PlayGame_Click">Play Game</Button>
-        </StackPanel-->
     </Grid>
 </Window>

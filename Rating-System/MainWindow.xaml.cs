@@ -62,20 +62,69 @@ namespace Rating_System
             App.Database.SaveChanges();
         }
 
-        private void PlayGame_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void AddPlayer_Click(object sender, RoutedEventArgs e)
         {
             CreatePlayerWindow create_player_window = new CreatePlayerWindow(m_MainWindowViewModel.BilliardsPlayers);
             create_player_window.Show();
         }
+
+        private void PreviewStudentIDInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+        }
+
+        private void ReportMatch_Click(object sender, RoutedEventArgs e)
+        {
+            BilliardsMatch match = new BilliardsMatch() {
+                Winner = m_MainWindowViewModel.BilliardsPlayers.Where(p => p.StudentID == int.Parse(m_MainWindowViewModel.WinnerIDBox)).First(),
+                Loser = m_MainWindowViewModel.BilliardsPlayers.Where(p => p.StudentID == int.Parse(m_MainWindowViewModel.LoserIDBox)).First(),
+                WinnerBallsPocketed = int.Parse(m_MainWindowViewModel.WinnerBallsBox),
+                LoserBallsPocketed = int.Parse(m_MainWindowViewModel.LoserBallsBox),
+            };
+
+            match.Run();
+            m_MainWindowViewModel.BilliardsMatches.Add(match);
+        }
     }
 
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+        private string _winnerIDBox;
+        public string WinnerIDBox { 
+            get => _winnerIDBox;
+            set { 
+                _winnerIDBox = value;
+                NotifyPropertyChanged();
+            } 
+        }        
+        
+        private string _winnerBallsBox;
+        public string WinnerBallsBox { 
+            get => _winnerBallsBox;
+            set {
+                _winnerBallsBox = value;
+                NotifyPropertyChanged();
+            } 
+        }        
+        
+        private string _loserIDBox;
+        public string LoserIDBox { 
+            get => _loserIDBox;
+            set {
+                _loserIDBox = value;
+                NotifyPropertyChanged();
+            } 
+        }        
+        
+        private string _loserBallsBox;
+        public string LoserBallsBox { 
+            get => _loserBallsBox;
+            set {
+                _loserBallsBox = value;
+                NotifyPropertyChanged();
+            } 
+        }
+
         public ObservableCollection<BilliardsPlayer> BilliardsPlayers { get; set; } = new ObservableCollection<BilliardsPlayer>();
         public ObservableCollection<BilliardsMatch> BilliardsMatches { get; set; } = new ObservableCollection<BilliardsMatch>();
 
