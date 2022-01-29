@@ -32,3 +32,5 @@ C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\Microsoft.Xaml.Behaviors.
 C:\Dev\proj\Billiards-Projects\Rating-System\bin\Debug\de\MahApps.Metro.resources.dll
 C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\Rating-System.csproj.AssemblyReference.cache
 C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\App.baml
+C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\CreatePlayerWindow.g.cs
+C:\Dev\proj\Billiards-Projects\Rating-System\obj\Debug\CreatePlayerWindow.baml

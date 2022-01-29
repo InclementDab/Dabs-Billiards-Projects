@@ -69,30 +69,13 @@ namespace Rating_System
 
         private void AddPlayer_Click(object sender, RoutedEventArgs e)
         {
-            if (m_MainWindowViewModel.StudentIDBox == null || m_MainWindowViewModel.StudentIDBox == string.Empty) {
-                Debug.WriteLine("Cannot Enter a student with an ID of 0");
-                return;
-            }
-
-            m_MainWindowViewModel.BilliardsPlayers.Add(new BilliardsPlayer() { FirstName = "Tyler", LastName = "Paul", StudentID = int.Parse(m_MainWindowViewModel.StudentIDBox) });
-        }
-
-        private void PreviewStudentIDInput(object sender, TextCompositionEventArgs e)
-        {
-            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+            CreatePlayerWindow create_player_window = new CreatePlayerWindow(m_MainWindowViewModel.BilliardsPlayers);
+            create_player_window.Show();
         }
     }
 
     public class MainWindowViewModel : INotifyPropertyChanged
     {
-        private string _studentIDBox;
-        public string StudentIDBox { get => _studentIDBox;
-            set {
-                _studentIDBox = value;
-                NotifyPropertyChanged();
-            }
-        }
-
         public ObservableCollection<BilliardsPlayer> BilliardsPlayers { get; set; } = new ObservableCollection<BilliardsPlayer>();
 
         public event PropertyChangedEventHandler PropertyChanged;
