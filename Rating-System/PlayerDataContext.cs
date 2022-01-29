@@ -58,6 +58,17 @@ namespace Rating_System
             }
         }
 
+        private double _rating;
+        public new double Rating {
+            get => _rating;
+            set {
+                Debug.WriteLine(value);
+                _rating = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+
         public new string Name => string.Format("%1 %2", FirstName, LastName);
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -75,8 +86,8 @@ namespace Rating_System
         public BilliardsPlayer Winner { get; set; }
         public BilliardsPlayer Loser { get; set; }
 
-        public string Player1Data => string.Format("%1 (%2)", Winner.FirstName, WinnerEloChange);
-        public string Player2Data => string.Format("%1 (%2)", Loser.FirstName, LoserEloChange);
+        public string Player1Data => $"{Winner.FirstName} ({WinnerEloChange})";
+        public string Player2Data => $"{Loser.FirstName} ({LoserEloChange})";
 
         public int WinnerBallsPocketed { get; set; }
         public int LoserBallsPocketed { get; set; }
@@ -119,6 +130,7 @@ namespace Rating_System
 
             WinnerEloChange = Winner.Rating - winner_original;
             LoserEloChange = Loser.Rating - loser_original;
+            Debug.WriteLine(WinnerEloChange);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
